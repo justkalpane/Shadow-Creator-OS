@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ScriptDraftPacket",
+  "type": "object",
+  "required": ["packet_type", "script_title", "script_body"],
+  "properties": {
+    "packet_type": {"const": "script_draft"},
+    "script_title": {"type": "string"},
+    "script_body": {"type": "string"},
+    "hook": {"type": "string"},
+    "angle": {"type": "string"},
+    "source_refs": {"type": "array", "items": {"type": "string"}}
+  }
+}
