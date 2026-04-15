@@ -1,0 +1,15 @@
+version: 1
+approval_states:
+  - pending_review
+  - approved
+  - rejected
+  - remodify_requested
+  - replay_ready
+  - replayed
+rules:
+  - rule_id: APPROVAL_REQUIRED_FOR_CONTEXT_PACKET
+    applies_to: context_packet
+    initial_state: pending_review
+  - rule_id: REJECTION_MUST_INCLUDE_REASON
+    applies_to: all
+    required_fields: [reason_codes, rejection_summary]
