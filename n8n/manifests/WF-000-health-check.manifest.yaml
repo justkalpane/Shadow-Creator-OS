@@ -1,0 +1,11 @@
+workflow_id: WF-000
+name: health_check
+class: system
+inputs: []
+outputs:
+  - health_status
+  - ollama_status
+  - n8n_runtime_status
+writes:
+  - runtime
+owner: system
