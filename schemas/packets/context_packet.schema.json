@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContextPacket",
+  "type": "object",
+  "required": ["packet_type", "context_summary", "handoff_target"],
+  "properties": {
+    "packet_type": {"const": "context_packet"},
+    "context_summary": {"type": "string"},
+    "handoff_target": {"type": "string"},
+    "evidence": {"type": "array", "items": {"type": "string"}},
+    "constraints": {"type": "array", "items": {"type": "string"}}
+  }
+}
