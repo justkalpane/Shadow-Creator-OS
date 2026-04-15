@@ -1,0 +1,16 @@
+version: 1
+routes:
+  - route_id: ROUTE_PHASE1_FAST
+    purpose: creator-safe fast path for topic to script
+    entry_workflow: WF-010
+    allowed_modes: [local, hybrid]
+    blocked_capabilities: [heavy_media_render, publish_live]
+  - route_id: ROUTE_PHASE1_STANDARD
+    purpose: governed path for topic to context packet
+    entry_workflow: WF-010
+    allowed_modes: [local, hybrid]
+    blocked_capabilities: [heavy_media_render]
+  - route_id: ROUTE_PHASE1_REPLAY
+    purpose: remodify and replay path
+    entry_workflow: WF-900
+    allowed_modes: [local, hybrid]
