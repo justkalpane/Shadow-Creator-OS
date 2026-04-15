@@ -1,0 +1,6 @@
+workflow_id: WF-900
+name: error_handler
+class: system
+inputs: [error_event]
+outputs: [error_resolution]
+owner: shadow_empire_phase1
