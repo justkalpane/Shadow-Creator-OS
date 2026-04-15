@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TopicIntakePacket",
+  "type": "object",
+  "required": ["packet_type", "topic_seed", "creator_goal"],
+  "properties": {
+    "packet_type": {"const": "topic_intake"},
+    "topic_seed": {"type": "string"},
+    "creator_goal": {"type": "string"},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "audience": {"type": "string"}
+  }
+}
